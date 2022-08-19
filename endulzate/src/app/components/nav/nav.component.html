@@ -1,0 +1,32 @@
+<div id="navbar">
+  <span id="logo">
+    <a id="titulo" routerLink="">Endúlzate</a>
+  </span>
+  <span id="busqueda">
+    <form>
+      <input
+        type="text"
+        placeholder="Busca un nombre, marca o país..."
+        id="barraBusqueda"
+        [(ngModel)]="searchValue"
+        #search
+        name="search"
+        (keypress)="enter($event, search)"
+        (change)="buscar(search)"
+      />
+      <button title="Buscar" (click)="buscar(search)">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+  </span>
+  <span id="carrito">
+    <a routerLink="/buy">
+      <i class="fa fa-shopping-cart" title="Carrito"></i>
+    </a>
+    <label
+      id="howMuch"
+      [ngClass]="servicio.numeroCarrito <= 0 ? 'carritoNo' : ''"
+      >{{ servicio.numeroCarrito }}</label
+    >
+  </span>
+</div>

@@ -1,0 +1,57 @@
+<div id="inicio">
+  <div
+    class="container"
+    *ngFor="let card of servicio.docProducts; let i = index"
+  >
+    <div class="card">
+      <div class="imgBx">
+        <img src="{{ card.image }}" alt="colombina" draggable="false" />
+      </div>
+
+      <div class="contentBx">
+        <h2>{{ card.name }} x{{ card.quantity }} ${{ card.price }}</h2>
+
+        <div class="color">
+          <h3>Marca : {{ card.brand }}</h3>
+        </div>
+
+        <div class="color">
+          <h3>País : {{ card.country }}</h3>
+        </div>
+
+        <div
+          class="size"
+          id="cantidadElegida"
+          [className]="card.carrito ? ' ddisable size' : 'size'"
+        >
+          <h3>Cantidad :</h3>
+          <input
+            #seleccionado
+            type="number"
+            min="1"
+            max="{{ card.quantity }}"
+            value="1"
+          />
+        </div>
+
+        <button
+          *ngIf="card.carrito == false"
+          #agregar
+          value="{{ card._id }}"
+          (click)="carrito(agregar, card.quantity, seleccionado)"
+        >
+          Agregar al carrito
+        </button>
+        <button
+          *ngIf="card.carrito == true"
+          #sacar
+          value="{{ card._id }}"
+          id="sacar"
+          (click)="removeCarrito(sacar.value)"
+        >
+          Quitar del carrito
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

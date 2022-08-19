@@ -1,0 +1,93 @@
+#navbar {
+    display: flex;
+    background-color: #ed1b2e;
+
+    color: white;
+    padding: 5px 25px;
+}
+
+
+#titulo {
+    font-weight: bold;
+    font-size: 35px;
+    text-decoration: none;
+    color: white;
+}
+
+#busqueda {
+    align-self: center;
+    justify-self: center;
+    margin: auto;
+    -webkit-box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.44);
+    box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.44);
+}
+
+#busqueda input {
+    width: 50vw;
+    height: 37px;
+    border-radius: 5px 0 0 5px;
+    font-size: 20px;
+    border: none;
+    padding: 0 4px;
+}
+
+#busqueda button {
+    height: 37px;
+    border-radius: 0 5px 5px 0;
+    font-size: 20px;
+    border: none;
+    border-left: 2px solid #dadada;
+    cursor: pointer;
+    background-color: white;
+    color: gray;
+    outline: none;
+    transition: background .2s ease;
+}
+
+#busqueda button:hover {
+    background-color: #d0d0d0;
+}
+
+#carrito {
+    font-size: 34px;
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+#carrito i {
+    display: inline-block;
+    margin: 0 15px;
+    transition: color .2s ease;
+}
+
+#carrito a {
+    text-decoration: none;
+    color: #ffffff;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+}
+
+#carrito a:hover {
+    color: #d0d0d0;
+}
+
+#howMuch {
+    background-color: #000000;
+    border-radius: 100%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+    right: -10px;
+    z-index: 10;
+    color: #FFF;
+}
+
+.carritoNo {
+    z-index: -2000 !important;
+}
