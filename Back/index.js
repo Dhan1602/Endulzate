@@ -47,7 +47,7 @@ app.get("/productos/:id/:cantidad/:selected", async (req, res) => {
     let savingCarrito = new carrito(tosave);
     await savingCarrito.save();
 
-    res.send({ "respuesta": "listo pa" });
+    res.send({ "respuesta": "Working" });
 });
 
 app.put("/removeCarrito/:id", async (req, res) => {
